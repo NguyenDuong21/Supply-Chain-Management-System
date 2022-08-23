@@ -1,0 +1,152 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'C:\\Program Files\\nodejs\\node.exe',
+1 verbose cli   'C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js',
+1 verbose cli   'install',
+1 verbose cli   'express',
+1 verbose cli   'nodemoon' ]
+2 info using npm@4.1.2
+3 info using node@v7.7.4
+4 silly loadCurrentTree Starting
+5 silly install loadCurrentTree
+6 silly install readLocalPackageData
+7 silly fetchPackageMetaData express
+8 silly fetchPackageMetaData nodemoon
+9 silly fetchNamedPackageData express
+10 silly mapToRegistry name express
+11 silly mapToRegistry using default registry
+12 silly mapToRegistry registry https://registry.npmjs.org/
+13 silly mapToRegistry data Result {
+13 silly mapToRegistry   raw: 'express',
+13 silly mapToRegistry   scope: null,
+13 silly mapToRegistry   escapedName: 'express',
+13 silly mapToRegistry   name: 'express',
+13 silly mapToRegistry   rawSpec: '',
+13 silly mapToRegistry   spec: 'latest',
+13 silly mapToRegistry   type: 'tag' }
+14 silly mapToRegistry uri https://registry.npmjs.org/express
+15 silly fetchNamedPackageData nodemoon
+16 silly mapToRegistry name nodemoon
+17 silly mapToRegistry using default registry
+18 silly mapToRegistry registry https://registry.npmjs.org/
+19 silly mapToRegistry data Result {
+19 silly mapToRegistry   raw: 'nodemoon',
+19 silly mapToRegistry   scope: null,
+19 silly mapToRegistry   escapedName: 'nodemoon',
+19 silly mapToRegistry   name: 'nodemoon',
+19 silly mapToRegistry   rawSpec: '',
+19 silly mapToRegistry   spec: 'latest',
+19 silly mapToRegistry   type: 'tag' }
+20 silly mapToRegistry uri https://registry.npmjs.org/nodemoon
+21 verbose request uri https://registry.npmjs.org/express
+22 verbose request no auth needed
+23 info attempt registry request try #1 at 10:30:53 AM
+24 verbose request id a8655dade5c1d948
+25 http request GET https://registry.npmjs.org/express
+26 verbose request uri https://registry.npmjs.org/nodemoon
+27 verbose request no auth needed
+28 info attempt registry request try #1 at 10:30:53 AM
+29 http request GET https://registry.npmjs.org/nodemoon
+30 http 200 https://registry.npmjs.org/express
+31 verbose headers { date: 'Fri, 23 Jul 2021 03:30:53 GMT',
+31 verbose headers   'content-type': 'application/json',
+31 verbose headers   'transfer-encoding': 'chunked',
+31 verbose headers   connection: 'keep-alive',
+31 verbose headers   'cf-ray': '6731d52e1b21c6d4-HAN',
+31 verbose headers   age: '783',
+31 verbose headers   'cache-control': 'public, max-age=300',
+31 verbose headers   etag: 'W/"136cf020199f4e921422df02b62e8c80"',
+31 verbose headers   'last-modified': 'Wed, 16 Jun 2021 11:44:55 GMT',
+31 verbose headers   vary: 'accept-encoding, accept',
+31 verbose headers   'cf-cache-status': 'HIT',
+31 verbose headers   'expect-ct': 'max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"',
+31 verbose headers   server: 'cloudflare',
+31 verbose headers   'content-encoding': 'gzip' }
+32 silly get cb [ 200,
+32 silly get   { date: 'Fri, 23 Jul 2021 03:30:53 GMT',
+32 silly get     'content-type': 'application/json',
+32 silly get     'transfer-encoding': 'chunked',
+32 silly get     connection: 'keep-alive',
+32 silly get     'cf-ray': '6731d52e1b21c6d4-HAN',
+32 silly get     age: '783',
+32 silly get     'cache-control': 'public, max-age=300',
+32 silly get     etag: 'W/"136cf020199f4e921422df02b62e8c80"',
+32 silly get     'last-modified': 'Wed, 16 Jun 2021 11:44:55 GMT',
+32 silly get     vary: 'accept-encoding, accept',
+32 silly get     'cf-cache-status': 'HIT',
+32 silly get     'expect-ct': 'max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"',
+32 silly get     server: 'cloudflare',
+32 silly get     'content-encoding': 'gzip' } ]
+33 verbose get saving express to C:\Users\Admin\AppData\Roaming\npm-cache\registry.npmjs.org\express\.cache.json
+34 verbose correctMkdir C:\Users\Admin\AppData\Roaming\npm-cache correctMkdir not in flight; initializing
+35 http 404 https://registry.npmjs.org/nodemoon
+36 verbose headers { date: 'Fri, 23 Jul 2021 03:30:54 GMT',
+36 verbose headers   'content-type': 'application/json',
+36 verbose headers   'content-length': '21',
+36 verbose headers   connection: 'keep-alive',
+36 verbose headers   'cf-ray': '6731d52e0d6ac6b0-HAN',
+36 verbose headers   vary: 'Accept-Encoding',
+36 verbose headers   'cf-cache-status': 'EXPIRED',
+36 verbose headers   'expect-ct': 'max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"',
+36 verbose headers   server: 'cloudflare' }
+37 silly get cb [ 404,
+37 silly get   { date: 'Fri, 23 Jul 2021 03:30:54 GMT',
+37 silly get     'content-type': 'application/json',
+37 silly get     'content-length': '21',
+37 silly get     connection: 'keep-alive',
+37 silly get     'cf-ray': '6731d52e0d6ac6b0-HAN',
+37 silly get     vary: 'Accept-Encoding',
+37 silly get     'cf-cache-status': 'EXPIRED',
+37 silly get     'expect-ct': 'max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"',
+37 silly get     server: 'cloudflare' } ]
+38 silly fetchPackageMetaData Error: Not found : nodemoon
+38 silly fetchPackageMetaData     at makeError (C:\Users\Admin\AppData\Roaming\nvm\v7.7.4\node_modules\npm\node_modules\npm-registry-client\lib\request.js:304:12)
+38 silly fetchPackageMetaData     at CachingRegistryClient.<anonymous> (C:\Users\Admin\AppData\Roaming\nvm\v7.7.4\node_modules\npm\node_modules\npm-registry-client\lib\request.js:292:14)
+38 silly fetchPackageMetaData     at Request._callback (C:\Users\Admin\AppData\Roaming\nvm\v7.7.4\node_modules\npm\node_modules\npm-registry-client\lib\request.js:212:14)
+38 silly fetchPackageMetaData     at Request.self.callback (C:\Users\Admin\AppData\Roaming\nvm\v7.7.4\node_modules\npm\node_modules\request\request.js:186:22)
+38 silly fetchPackageMetaData     at emitTwo (events.js:106:13)
+38 silly fetchPackageMetaData     at Request.emit (events.js:194:7)
+38 silly fetchPackageMetaData     at Request.<anonymous> (C:\Users\Admin\AppData\Roaming\nvm\v7.7.4\node_modules\npm\node_modules\request\request.js:1081:10)
+38 silly fetchPackageMetaData     at emitOne (events.js:96:13)
+38 silly fetchPackageMetaData     at Request.emit (events.js:191:7)
+38 silly fetchPackageMetaData     at IncomingMessage.<anonymous> (C:\Users\Admin\AppData\Roaming\nvm\v7.7.4\node_modules\npm\node_modules\request\request.js:1001:12)
+38 silly fetchPackageMetaData  error for nodemoon { Error: Not found : nodemoon
+38 silly fetchPackageMetaData     at makeError (C:\Users\Admin\AppData\Roaming\nvm\v7.7.4\node_modules\npm\node_modules\npm-registry-client\lib\request.js:304:12)
+38 silly fetchPackageMetaData     at CachingRegistryClient.<anonymous> (C:\Users\Admin\AppData\Roaming\nvm\v7.7.4\node_modules\npm\node_modules\npm-registry-client\lib\request.js:292:14)
+38 silly fetchPackageMetaData     at Request._callback (C:\Users\Admin\AppData\Roaming\nvm\v7.7.4\node_modules\npm\node_modules\npm-registry-client\lib\request.js:212:14)
+38 silly fetchPackageMetaData     at Request.self.callback (C:\Users\Admin\AppData\Roaming\nvm\v7.7.4\node_modules\npm\node_modules\request\request.js:186:22)
+38 silly fetchPackageMetaData     at emitTwo (events.js:106:13)
+38 silly fetchPackageMetaData     at Request.emit (events.js:194:7)
+38 silly fetchPackageMetaData     at Request.<anonymous> (C:\Users\Admin\AppData\Roaming\nvm\v7.7.4\node_modules\npm\node_modules\request\request.js:1081:10)
+38 silly fetchPackageMetaData     at emitOne (events.js:96:13)
+38 silly fetchPackageMetaData     at Request.emit (events.js:191:7)
+38 silly fetchPackageMetaData     at IncomingMessage.<anonymous> (C:\Users\Admin\AppData\Roaming\nvm\v7.7.4\node_modules\npm\node_modules\request\request.js:1001:12) pkgid: 'nodemoon', statusCode: 404, code: 'E404' }
+39 silly rollbackFailedOptional Starting
+40 silly rollbackFailedOptional Finishing
+41 silly runTopLevelLifecycles Finishing
+42 silly install printInstalled
+43 verbose stack Error: Not found : nodemoon
+43 verbose stack     at makeError (C:\Users\Admin\AppData\Roaming\nvm\v7.7.4\node_modules\npm\node_modules\npm-registry-client\lib\request.js:304:12)
+43 verbose stack     at CachingRegistryClient.<anonymous> (C:\Users\Admin\AppData\Roaming\nvm\v7.7.4\node_modules\npm\node_modules\npm-registry-client\lib\request.js:292:14)
+43 verbose stack     at Request._callback (C:\Users\Admin\AppData\Roaming\nvm\v7.7.4\node_modules\npm\node_modules\npm-registry-client\lib\request.js:212:14)
+43 verbose stack     at Request.self.callback (C:\Users\Admin\AppData\Roaming\nvm\v7.7.4\node_modules\npm\node_modules\request\request.js:186:22)
+43 verbose stack     at emitTwo (events.js:106:13)
+43 verbose stack     at Request.emit (events.js:194:7)
+43 verbose stack     at Request.<anonymous> (C:\Users\Admin\AppData\Roaming\nvm\v7.7.4\node_modules\npm\node_modules\request\request.js:1081:10)
+43 verbose stack     at emitOne (events.js:96:13)
+43 verbose stack     at Request.emit (events.js:191:7)
+43 verbose stack     at IncomingMessage.<anonymous> (C:\Users\Admin\AppData\Roaming\nvm\v7.7.4\node_modules\npm\node_modules\request\request.js:1001:12)
+44 verbose statusCode 404
+45 verbose pkgid nodemoon
+46 verbose cwd D:\node\nodejs
+47 error Windows_NT 10.0.19042
+48 error argv "C:\\Program Files\\nodejs\\node.exe" "C:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "install" "express" "nodemoon"
+49 error node v7.7.4
+50 error npm  v4.1.2
+51 error code E404
+52 error 404 Not found : nodemoon
+53 error 404
+54 error 404 'nodemoon' is not in the npm registry.
+55 error 404 You should bug the author to publish it (or use the name yourself!)
+56 error 404 Note that you can also install from a
+57 error 404 tarball, folder, http url, or git url.
+58 verbose exit [ 1, true ]

@@ -1,0 +1,27 @@
+.verified_info{
+    color: green;
+}
+.status1{
+    font-family: sans-serif;
+    color: white;
+    border: 1px solid #fb9678;
+    background-color: #fb9678;
+    border-radius: 60px;
+    padding: 4px 16px 3px;
+}
+.status2{
+    font-family: sans-serif;
+    color: white;
+    border: 1px solid #fec107;
+    background-color: #fec107;
+    border-radius: 60px;
+    padding: 4px 16px 3px;
+}
+.status3{
+    font-family: sans-serif;
+    color: white;
+    border: 1px solid #00c292;
+    background-color: #00c292;
+    border-radius: 60px;
+    padding: 4px 16px 3px;
+}

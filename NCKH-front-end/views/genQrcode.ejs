@@ -1,0 +1,150 @@
+<form id="harvesterForm" action="/genQrThanhTra" method="post" class="mb-5 white-popup-block ">
+    <h1>Thanh tra nông trại</h1><br>
+    <fieldset style="border:0;">
+        <div class="form-group">
+            <label class="control-label" for="cropVariety">Giống cây</label>
+            <input type="text" class="form-control" id="loaisp" name="giongcay" data-parsley-required="true">
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="temperatureUsed">Loại phân bón</label>
+            <input type="text" class="form-control" id="sanluong" name="loaiphanbon" data-parsley-required="true">
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="temperatureUsed">Mùa vụ</label>
+            <input type="text" class="form-control" id="donvitinh" name="muavu" data-parsley-required="true">
+        </div>
+        <div class="form-group float-right">
+            <button type="reset" class="btn btn-default waves-effect">Làm mới</button>
+            <button type="submit" id="save"class="btn btn-primary">Lưu</button>
+        </div>
+    </fieldset>
+</form>
+<form id="harvesterForm" action="/genQrThuHoach" method="post" class="mb-5 white-popup-block ">
+    <h1>Đơn vị thu hoạch</h1><br>
+    <fieldset style="border:0;">
+        <div class="form-group">
+            <label class="control-label" for="cropVariety">Loại sản phẩm</label>
+            <input type="text" class="form-control" id="loaisp" name="loaisanpham" data-parsley-required="true">
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="temperatureUsed">Sản lượng</label>
+            <input type="text" class="form-control" id="sanluong"  name="sanluong" data-parsley-required="true">
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="temperatureUsed">Đơn vị tính</label>
+            <input type="text" class="form-control" id="donvitinh" name="donvitinh" data-parsley-required="true">
+        </div>
+        <div class="form-group float-right">
+            <button type="reset" class="btn btn-default waves-effect">Làm mới</button>
+            <button type="submit" id="save"class="btn btn-primary">Lưu</button>
+        </div>
+    </fieldset>
+</form>
+
+
+<form id="harvesterForm" method="post" action="/genQrDongGoi" class="mb-5 white-popup-block ">
+    <h1>Đơn vị đóng gói</h1><br>
+    <fieldset style="border:0;">
+        <div class="form-group">
+            <label class="control-label" for="madonvi">Mã đơn vị</label>
+            <input type="text" class="form-control" id="madonvi" name="madonvi" data-parsley-required="true">
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="diacchi">Địa chỉ</label>
+            <input type="text" class="form-control" id="diacchi" name="diachi" data-parsley-required="true">
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="ngaynhan">Ngày nhận</label>
+            <input type="date" class="form-control" id="ngaynhan" name="ngaynhan" data-parsley-required="true">
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="soluong">Số lượng</label>
+            <input type="text" class="form-control" id="soluong" name="soluong" data-parsley-required="true">
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="donvitinh">Đơn vị tính</label>
+            <input type="text" class="form-control" id="donvitinh" name="donvitinh" data-parsley-required="true">
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="ngaydonggoi">Ngày đóng gói</label>
+            <input type="date" class="form-control" id="ngaydonggoi" name="ngaydonggoi" data-parsley-required="true">
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="hansudung">Hạn sử dụng</label>
+            <input type="date" class="form-control" id="hansudung" name="hansudung" data-parsley-required="true">
+        </div>
+        <div class="form-group float-right">
+            <button type="reset" class="btn btn-default waves-effect">Làm mới</button>
+            <button type="submit" id="save"class="btn btn-primary">Lưu</button>
+        </div>
+    </fieldset>
+</form>
+
+<form id="harvesterForm" action="/genQrPhanPhoi" method="post" class="mb-5 white-popup-block ">
+    <h1>Đơn vị phân phối</h1><br>
+    <fieldset style="border:0;">
+        <div class="form-group">
+            <label class="control-label" for="madonvi">Mã đơn vị</label>
+            <input type="text" class="form-control" id="madonvi" name="madonvi" data-parsley-required="true">
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="phuongtien">Phương tiện vận chuyển</label>
+            <input type="text" class="form-control" id="phuongtien" name="phuongtien" data-parsley-required="true">
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="bienso">Biển số</label>
+            <input type="text" class="form-control" id="bienso" name="bienso" data-parsley-required="true">
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="diachigiao">Địa chỉ giao</label>
+            <input type="text" class="form-control" id="diachigiao" name="diachigiao" data-parsley-required="true">
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="ngaygiao">Ngày giao</label>
+            <input type="date" class="form-control" id="ngaygiao" name="ngaygiao" data-parsley-required="true">
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="soluonggiao">Số lượng giao</label>
+            <input type="text" class="form-control" id="soluonggiao" name="soluonggiao" data-parsley-required="true">
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="donvitinh">Đơn vị tính</label>
+            <input type="text" class="form-control" id="donvitinh" name="donvitinh" data-parsley-required="true">
+        </div>
+        <div class="form-group float-right">
+            <button type="reset" class="btn btn-default waves-effect">Làm mới</button>
+            <button type="submit" id="save"class="btn btn-primary">Lưu</button>
+        </div>
+    </fieldset>
+</form>
+
+
+<form id="harvesterForm" action="genQrThuMua" method="post" class="mb-5 white-popup-block ">
+    <h1>Đơn vị thu mua</h1><br>
+    <fieldset style="border:0;">
+        <div class="form-group">
+            <label class="control-label" for="madonvi">Mã đơn vị</label>
+            <input type="text" class="form-control" id="madonvi" name="madonvi" data-parsley-required="true">
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="diachi">Địa chỉ</label>
+            <input type="text" class="form-control" id="diachi" name="diachi" data-parsley-required="true">
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="ngaynhan">Ngày nhận hàng</label>
+            <input type="date" class="form-control" id="ngaynhan" name="ngaynhan" data-parsley-required="true">
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="soluongnhan">Số lượng nhận</label>
+            <input type="text" class="form-control" id="soluongnhan" name="soluongnhan" data-parsley-required="true">
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="donvitinh">Đơn vị tính</label>
+            <input type="text" class="form-control" id="donvitinh" name="donvitinh" data-parsley-required="true">
+        </div>
+        <div class="form-group float-right">
+            <button type="reset" class="btn btn-default waves-effect">Làm mới</button>
+            <button type="submit" id="save"class="btn btn-primary">Lưu</button>
+        </div>
+    </fieldset>
+</form>

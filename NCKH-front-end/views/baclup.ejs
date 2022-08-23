@@ -1,0 +1,286 @@
+<div class="container-fluid">
+    <div class="row bg-title">
+        <div class="col-lg-3 col-md-4 col-sm-4 col-xs-12">
+            <h4 class="page-title">Dashboard</h4>
+        </div>
+        <div class="col-lg-9 col-sm-8 col-md-8 col-xs-12">
+        </div>
+        <!-- /.col-lg-12 -->
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            <div class="alert alert-info" id="divOngoingTransaction" style="display: none">Ongoing Transaction: <span id="linkOngoingTransaction">None</span> </div>
+        </div>    
+    </div>
+
+    <!-- /.row -->
+    <div class="row">
+        <!-- <h2>This is data </h2>
+        <h2><% for(let i=0 ; i<data.length;i++){
+            %>
+           <p><%= data[i].tendangnhap%></p> 
+           <p><%= data[i].matkhau%></p> 
+            <%}%></h2> -->
+        <div class="col-lg-4 col-sm-6 ">
+            <div class="white-box">
+                <h3 class="box-title">Tổng số người dùng</h3>
+                <ul class="list-inline two-part">
+                    <li><i class="icon-user text-info"></i></li>
+                    <li class="text-right"><span class="counter text-info" id="totalUsers"><a><%= data.length%></a> </span></li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-lg-4 col-sm-6 ">
+            <div class="white-box">
+                <h3 class="box-title">Tổng số vai trò</h3>
+                <ul class="list-inline two-part"> 
+                    <li><i class="icon-graduation text-purple"></i></li>
+                    <li class="text-right "><span class="counter text-purple"><a><%= per1.length%></a></span></li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-lg-4 col-sm-6 ">
+            <div class="white-box">
+                <h3 class="box-title">Tổng số lô hàng</h3>
+                <ul class="list-inline two-part">
+                    <li><i class="icon-doc text-success"></i></li>
+                    <li class="text-right"><span class="counter text-success" id="totalBatch">0</span></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!--row -->
+    <!-- /.row -->
+    
+
+                   <!-- row -->
+    <div class="row">
+        <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
+            <div class="white-box">
+                 <a href="javascript:void(0);" class="btn btn-info pull-right m-l-20 btn-rounded btn-outline hidden-xs hidden-sm waves-effect waves-light" onclick="javascript:$('#batchFormModel').modal();">Tạo lô hàng mới--</a>
+                <h3 class="box-title">Thông tin chung về lô hàng</h3> 
+                <div class="table-responsive">
+                    <table class="table product-overview" id="adminCultivationTable">
+                        <thead>
+                            <tr>
+                                <th>Mã lô hàng</th>
+                                <th>QR-Code</th>
+                                <th>Thanh tra nông trại</th>
+                                <th>Đơn vị thu hoạch</th>
+                                <th>Đơn vị đóng gói</th>
+                                <th>Đơn vị phân phối</th>
+                                <th>Đơn vị thu mua</th>
+                                <th>Trạng thái lô hàng</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                             <tr>
+                                 <td colspan="7" align="center">Không có dữ liệu</td>
+                             </tr>   
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-lg-6 col-sm-6 col-xs-12">
+            <div class="white-box">
+                <h3 class="box-title">Email <i class="fa fa-qrcode fa-2x text-success"></i></h3>
+                <ul class="list-inline two-part">
+                    <li class="text-right" id="currentUserAddress">0x0000000000000000000000000000000000000000</li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-lg-6 col-sm-6 col-xs-12">
+            <div class="white-box">
+               <h3 class="box-title">Storage Contract Address <i class="fa fa-qrcode fa-2x text-danger"></i></h3>
+                <ul class="list-inline two-part">
+                    <li class="text-right" id="storageContractAddress">0x0000000000000000000000000000000000000000</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-6 col-sm-6 col-xs-12">
+            <div class="white-box">
+                <h3 class="box-title">Coffee Supplychain Contract Address <i class="fa fa-qrcode fa-2x text-info"></i></h3>
+                <ul class="list-inline two-part">
+                    <li class="text-right" id="coffeeSupplychainContractAddress">0x0000000000000000000000000000000000000000</li>
+                </ul>
+            </div>
+        </div>
+        <div class="col-lg-6 col-sm-6 col-xs-12">
+            <div class="white-box">
+               <h3 class="box-title">User Contract Address <i class="fa fa-qrcode fa-2x text-info"></i></h3>
+                <ul class="list-inline two-part">
+                    <li class="text-right" id="userContractAddress">0x0000000000000000000000000000000000000000</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!--row -->
+    <div class="row">
+        <div class="col-md-12 col-lg-4 col-sm-12">
+            <div class="white-box">
+                <h3 class="box-title">Vai trò của người dùng</h3> 
+                <div class="table-responsive">
+                    <table class="table product-overview">
+                        <thead>
+                            <tr>
+                                <th>Vai trò</th>
+                                <th>Ký hiệu</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Thanh tra nông trại</td>
+                                <td><span class="label label-info font-weight-100">THANH TRA NÔNG TRẠI</span></td>
+                            </tr>
+                             <tr>
+                                <td>Đơn vị thu hoạch</td>
+                                <td><span class="label label-success font-weight-100">ĐV THU HOẠCH</span></td>
+                            </tr>
+                            <tr>
+                                <td>Đơn vị đóng gói</td>
+                                <td><span class="label label-warning font-weight-100">ĐV ĐÓNG GÓI</span></td>
+                            </tr>
+                            <tr>
+                                <td>Đơn vị phân phối</td>
+                                <td><span class="label label-danger font-weight-100">ĐV PHÂN PHỐI</span></td>
+                            </tr>
+                            <tr>
+                                <td>Đơn vị thu mua</td>
+                                <td><span class="label label-primary font-weight-100">ĐV THU MUA</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-12 col-lg-8 col-sm-12">
+            <div class="white-box">
+                 <a href="javascript:void(0);" id="userFormClick" class="btn btn-info pull-right m-l-20 btn-rounded btn-outline hidden-xs hidden-sm waves-effect waves-light">Thêm người dùng</a>
+                <h3 class="box-title">Thông tin người dùng</h3> 
+                <div class="table-responsive">
+                    <table class="table product-overview table-responsive" id="tblUser">
+                        <thead>
+                            <tr>
+                                <th>Tên người dùng</th>
+                                <th>Email</th>
+                                <th>Só điện thoại</th>
+                                <th>Vai trò</th>
+                                <th>Trạng thái</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                           
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /.row -->
+
+</div>
+<!-- /.container-fluid -->
+
+<div id="batchFormModel" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none; padding-top: 170px;">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h2 class="modal-title">Thêm lô hàng</h2>
+            </div>
+            <div class="modal-body">
+                <form id="batchForm" onsubmit="return false;">
+                <fieldset style="border:0;">
+                    <div class="form-group">
+                        <label class="control-label" for="farmerRegistrationNo">Mã nông dân/HTX <i class="red">*</i></label>
+                        <input type="text" class="form-control" id="farmerRegistrationNo" name="farmerRegistrationNo" placeholder="Registration No" data-parsley-required="true">
+                    </div> 
+                    <div class="form-group">
+                        <label class="control-label" for="farmerName">Tên nông dân/HTX <i class="red">*</i></label>
+                        <input type="text" class="form-control" id="farmerName" name="farmerName" placeholder="Farmer Name" data-parsley-required="true">
+                    </div>                              
+                    <div class="form-group">
+                        <label class="control-label" for="farmerAddress">Địa chỉ <i class="red">*</i></label>
+                        <textarea class="form-control" id="farmerAddress" name="farmerAddress" placeholder="Farmer Address" data-parsley-required="true"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label" for="exporterName">Đơn vị thu hoạch <i class="red">*</i></label>
+                        <input type="text" class="form-control" id="exporterName" name="exporterName" placeholder="Exporter Name" data-parsley-required="true">
+                    </div> 
+                    <div class="form-group">
+                        <label class="control-label" for="importerName">Đơn vị đóng gói <i class="red">*</i></label>
+                        <input type="text" class="form-control" id="importerName" name="importerName" placeholder="Importer Name" data-parsley-required="true">
+                    </div> 
+                </fieldset>
+                
+            </div>
+            <div class="modal-footer">
+                 <button type="submit" onclick="addCultivationBatch();" class="fcbtn btn btn-primary btn-outline btn-1f">Tạo</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="userFormModel" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none; padding-top: 170px;">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h2 class="modal-title" id="userModelTitle">Thêm người dùng</h2>
+            </div>
+            <div class="modal-body">
+                <form id="userForm" onsubmit="return false;">
+                    <fieldset style="border:0;">
+                        <div class="form-group">
+                            <label class="control-label" for="userWalletAddress">Tên người dùng <i class="red">*</i></label>
+                            <input type="text" class="form-control" id="userWalletAddress" name="userWalletAddress" placeholder="Wallet Address" data-parsley-required="true" minlength="42" maxlength="42">
+                        </div> 
+                        <div class="form-group">
+                            <label class="control-label" for="userName">Email <i class="red">*</i></label>
+                            <input type="text" class="form-control" id="userName" name="userName" placeholder="Name" data-parsley-required="true">
+                        </div>                              
+                        <div class="form-group">
+                            <label class="control-label" for="userContactNo">Số điện thoại <i class="red">*</i></label>
+                            <input type="text" class="form-control" id="userContactNo" name="userContactNo" placeholder="Contact No." data-parsley-required="true" data-parsley-type="digits" data-parsley-length="[10, 15]" maxlength="15">
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label" for="userRoles">Vai trò <i class="red">*</i></label>
+                            <select class="form-control" id="userRoles" name="userRoles" data-parsley-required="true">
+                                <option value=""></option>
+                                <option value="FARM_INSPECTION">Thanh tra nông trại</option>
+                                <option value="HARVESTER">Đơn vị thu hoạch</option>
+                                <option value="EXPORTER">Đơn vị đóng gói</option>
+                                <option value="IMPORTER">Đơn vị phân phối</option>
+                                <option value="PROCESSOR">Đơn vị thu mua</option>
+                            </select>    
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label" for="isActive">Trạng thái người dùng</label>
+                            <input type="checkbox" class="js-switch" data-color="#99d683" data-secondary-color="#f96262" id="isActive" name="isActive" data-size="small"/>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label" for="userProfileHash">Ảnh đại diện <i class="red">*</i></label>
+                            <input type="file" class="form-control" onchange="handleFileUpload(event);" />
+                            <input type="hidden" class="form-control" id="userProfileHash" name="userProfileHash" placeholder="User Profile Hash" data-parsley-required="true" >
+                            <span id="imageHash"></span>
+                        </div>
+                    </fieldset>
+                
+            </div>
+            <div class="modal-footer">
+                <i style="display: none;" class="fa fa-spinner fa-spin"></i>
+                 <button type="submit" onclick="userFormSubmit();" class="fcbtn btn btn-primary btn-outline btn-1f" id="userFormBtn">Tạo</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
